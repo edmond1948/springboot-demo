@@ -10,12 +10,13 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/")
-public class MainController {
+public class HeartbeatController {
 
     private static SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-    @GetMapping("/")
+
+    @GetMapping("/heartbeat")
     @ResponseBody
     public String index(){
-        return "index: " + simpleDateFormat.format(new Date());
+        return "heartbeat: " + simpleDateFormat.format(new Date());
     }
 }
